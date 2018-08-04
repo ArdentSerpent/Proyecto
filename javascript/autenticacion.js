@@ -44,7 +44,7 @@ jQuery(document).ready(function($){
 				.auth()
 				.createUserWithEmailAndPassword(email_registro, contraseña_registro)
 				.then(function(){
-					location.href ="Login.html";
+					location.href ="Clases.html";
 					alert("Cuenta creada correctamente");
 				})
 				.catch(function(error) {
