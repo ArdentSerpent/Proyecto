@@ -2,9 +2,10 @@
 	text-align: center;
 	padding: 50px;
 	border: 1px solid rgb(241 243 243);
-	background-color: #ffad33;
+	background-color: #AD841F;
 	margin-bottom: 10px;
 	border-radius: 10px;
+	color: white;
 }
 .A {
 	background-size: 1150px 700px;
@@ -15,4 +16,11 @@
 	background-size: 1150px 700px;
 	background-image: url("../Imagenes/guitarra.jpg");
 	color: white;
+}
+.int{
+	color: black;
+}
+.int:hover{
+	color: white;
+	text-decoration: none;
 }
