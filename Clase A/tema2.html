@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="../Imagenes/icono.ico">
+	<title>Notas musicales - Clase A</title>
+
+	<!--Bootstrap-->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+	<!--Css-->
+
+	<link rel="stylesheet" type="text/css" href="../css/Encabezado.css">
+	<link rel="stylesheet" type="text/css" href="../css/clase.css">
+</head>
+<body>
+
+	<!--Barra de navegacion-->
+
+	<header>
+		<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+			<ul class="navbar-nav">
+				<li class="navbar-brand">
+					<img src="../Imagenes/icono.jpg" height="60" width="70" class="d-inline-block align-top">
+					Música Ya!
+				</li>
+				<li class="nav-item">	 
+					<a class="nav-link" href="../Pagina_principal.html">Inicio</a>
+				</li>
+				<li class="nav-item">	 
+					<a class="nav-link" href="../Login.html">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../Registro.html">Registrate</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../Clases.html">Clases</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../Contacto.html">Contacto</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<h3 class="titulo"></h3>
+				<hr>
+				<p class="contenido"></p>
+			</div>
+		</div>
+	</div>
+	<div class="container Nota">
+		<p class="nota"><b>Nota: </b></p>
+	</div>
+	<div class="container respuestas">
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<h3>¿Cuáles son las notas musicales?</h3>
+				<hr>
+				<label for="respuesta_uno" class="col-xs-12 col-md-12">
+					<input type="radio" name="radio" id="respuesta_uno"> <b>C, D, E , F , G, A, B.</b>
+				</label>
+				<label for="respuesta_dos" class="col-xs-12 col-md-12">
+					<input type="radio" name="radio" id="respuesta_dos"> <b>Re, Mi , Fa, La, Do , Sol, Si.</b>
+				</label>
+				<label for="respuesta_tres" class="col-xs-12 col-md-12">
+					<input type="radio" name="radio" id="respuesta_tres"> <b>Do, Re, Mi , Fa, Sol, La, Si.</b>
+				</label>
+				<button type="submit" class="btn btn-primary" id="boton">Verificar</button>
+			</div>
+		</div>
+	</div>
+
+	<!--Footer-->
+
+	<footer style="margin-top: 10px">
+		<nav class="navbar navbar-expand-sm bg-light ">
+			<ul class="navbar-nav">
+				<li class="navbar-brand">
+					<h6>Música Ya - 2018</h6>
+				</li>
+				<li class="nav-item">	 
+					<a class="nav-link" href="../Pagina_principal.html">Inicio</a>
+				</li>
+				<li class="nav-item">	 
+					<a class="nav-link" href="../Login.html">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../Registro.html">Registrate</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../Clases.html">Clases</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../Contacto.html">Contacto</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+
+	<!--Bootstrap-->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+	
+	<!--Scripts--> 
+
+	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+	<script src="../javascript/firebase.js"></script>
+	<script src="../javascript/autenticacion.js"></script>
+
+	<!--Validar respuesta-->
+
+	<script>
+
+		jQuery(document).ready(function($){
+			$('#boton').click(
+				function(e){
+					e.preventDefault();
+
+					if ($("#respuesta_uno")[0].checked==true){
+						alert("Respuesta correcta");
+						location.href='tema2.1.html';
+					}else if ($("#respuesta_dos")[0].checked==true){
+						alert("Respuesta incorrecta");
+					}else if ($("#respuesta_tres")[0].checked==true){
+						alert("Respuesta correcta");
+						location.href='tema2.1.html';
+					} else 
+					alert("Debes seleccionar una respuesta");
+				})
+		});
+
+	</script>
+	<script>
+		
+		var traer_mensaje = new Promise (function(res, rej) {
+			var mensaje = database.ref("/clasea/clases/clasea/tema2/").once("value").then(function(snapshot){
+				var data = snapshot.val();
+
+				$('.titulo').text(data.titulo);
+				$('.contenido').text(data.contenido);
+				$('.nota').append(data.nota);
+
+				return res(data);
+
+			});
+			if (!mensaje) { return rej();}
+		});
+	</script>
+</body>
+</html>

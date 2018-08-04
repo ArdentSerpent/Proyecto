@@ -1,0 +1,112 @@
+		 <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="Imagenes/icono.ico">
+	<title>Clases</title>
+	
+	<!--Scripts--> 
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+	<script src="javascript/firebase.js"></script>
+	<script type="text/javascript">
+		var loginUrl = 'Login.html';
+	</script>
+	<script src="javascript/autenticacion.js"></script>
+	<script src="javascript/validarLogin.js"></script>
+	<script src="javascript/logOut.js"></script>
+
+	<!--Bootstrap-->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+	<!--Css-->
+	
+	<link rel="stylesheet" type="text/css" href="css/Clases.css">
+	<link rel="stylesheet" type="text/css" href="css/Encabezado.css">
+</head>
+<body>
+
+	<!--Barra de navegación-->
+
+	<header>
+		<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+			<ul class="navbar-nav">
+				<li class="navbar-brand">
+					<img src="Imagenes/icono.jpg" height="60" width="70" class="d-inline-block align-top" onclick="location.href='Pagina_principal.html'">
+					Música Ya!
+				</li>
+				<li class="nav-item">	 
+					<a class="nav-link" href="Pagina_principal.html">Inicio</a>
+				</li>
+				<li class="nav-item">	 
+					<a class="nav-link" href="Login.html">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Registro.html">Registrate</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Clases.html">Clases</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Contacto.html">Contacto</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link cs" href="Pagina_principal.html">Cerrar sesion</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="col-xs-12 col-ms-12 D">
+			<h1>¿Qué quieres aprender hoy?</h1>
+		</div>
+		<button class="col-xs-12 col-md-12 A" onclick="location.href='Clase A/Introduccion.html'">
+			<h1><a href="Clase A/Introduccion.html">A</a></h1>
+			<h3><b>Teoría simplificada</b></h3>
+			<hr>
+			<p><b>Perfecto para quienes recién se adentran en el mundo de la música.</b></p>
+		</button>
+		<button class="col-xs-12 col-md-12 B" onclick="location.href='Clase B/Introduccion.html'">
+			<h1><a href="Clase B/Introduccion.html">B</a></h1>
+			<h3><b>Clases de Guitarra</b></h3>
+			<hr>
+			<p><b>¿Siempre has querido tocar este instrumenro pero no sabes como empezar?, Entra ya al curso de guitarra.</b></p>
+		</button>
+	</div>
+
+	<!--Footer-->
+	
+	<footer style="margin-top: 10px">
+		<nav class="navbar navbar-expand-sm bg-light ">
+			<ul class="navbar-nav">
+				<li class="navbar-brand">
+					<h6>Musica Ya - 2018</h6>
+				</li>
+				<li class="nav-item">	 
+					<a class="nav-link" href="Pagina_principal.html">Inicio</a>
+				</li>
+				<li class="nav-item">	 
+					<a class="nav-link" href="Login.html">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Registro.html">Registrate</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link enlace" href="Clases.html">Clases</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Contacto.html">Contacto</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+
+	<!--Bootstrap-->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.container {
+	text-align: center;
+	padding: 50px 150px 10px;
+	border: 1px solid rgb(241 243 243);
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+p {
+	text-align: justify;
+}
+.Nota {
+	background-color: #F2F5A9;
+}
+label{
+	margin-bottom: 19px;
+	text-align: left;
+}
